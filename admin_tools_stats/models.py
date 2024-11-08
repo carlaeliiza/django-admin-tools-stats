@@ -11,7 +11,6 @@
 
 from django.db import models
 from django.core.exceptions import FieldError, ValidationError
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from django.apps import apps
 import jsonfield.fields
@@ -28,7 +27,7 @@ operation = (
 )
 
 
-@python_2_unicode_compatible
+
 class DashboardStatsCriteria(models.Model):
     """
     To configure criteria for dashboard graphs
@@ -76,7 +75,7 @@ class DashboardStatsCriteria(models.Model):
             return u"%s" % self.criteria_name
 
 
-@python_2_unicode_compatible
+
 class DashboardStats(models.Model):
     """To configure graphs for dashboard
 
